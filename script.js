@@ -1,0 +1,4 @@
+let player='';function start(){player=document.getElementById('name').value.trim();if(!player)return alert('Masukkan nama');document.getElementById('game').style.display='block';document.getElementById('hi').textContent='Halo, '+player+'!';}
+function hadiah(){return Math.random()<0.4?'🥟 1 Gorengan Gratis':'😢 Belum Beruntung';}
+function roll(){document.getElementById('out').innerHTML='<h2>'+hadiah()+'</h2>';}
+function quiz(){let j=prompt('Berapa 5+4?');document.getElementById('out').innerHTML=(j=='9')?'<h2>🎉 Benar! 🥟 1 Gorengan Gratis</h2><button onclick="this.outerHTML=\'<h3>✅ Hadiah Sudah Diambil</h3>\'">Hadiah Sudah Diambil</button>':'<h2>😢 Jawaban salah</h2>'; }
